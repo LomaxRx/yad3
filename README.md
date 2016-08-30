@@ -34,21 +34,21 @@ yad3.Chart( 'scatter', {
   },
   render: function(){
     this.scatterGroup = this.chart.append('g')
-      .attr('class', 'plots');
+      .attr('class', 'scatterGroup');
 
-    this.scatter = this.scatterGroup.selectAll('.plot');
+    this.scatter = this.scatterGroup.selectAll('.scatter');
     this.update();
   },
   update: function(){
     this.scatter = this.scatter.data(this.data());
 
      this.scatter.enter().append('circle')
-        .attr( 'class', 'plot' )
+        .attr( 'class', 'scatter' )
         .attr( 'r', 0 )
         .attr( 'cx', this.scaler.x )
         .attr( 'cy', this.scaler.y )
         .attr( 'fill', this.color )
-      .merge(this.plot)
+      .merge(this.scatter)
         .transition()
         .duration(1500)
         .attr( 'r', this.scaler.r )
