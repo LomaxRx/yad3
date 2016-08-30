@@ -1,0 +1,28 @@
+{
+  "name": "yad3",
+  "version": "1.0.0",
+  "description": "yet another d3 framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "bundle": "rollup -c rollup_config.js"
+  },
+  "keywords": [
+    "d3",
+    "data",
+    "viz",
+    "data",
+    "visualizations",
+    "framework"
+  ],
+  "author": "Andrew Lomax",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^4.1.1"
+  },
+  "devDependencies": {
+    "rollup": "^0.34.1",
+    "rollup-watch": "^2.5.0",
+    "uglify-js": "^2.7.0"
+  }
+}
