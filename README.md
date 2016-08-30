@@ -27,11 +27,10 @@ yad3.Chart( 'scatter', {
   },
   scale: {
     r: function(){
-      return d3.scaleLinear().range([10,25]).domain(this.extent.r);
+      return d3.scaleLinear()
+        .domain(this.extent.r)
+        .range([10,25]);
     }
-  },
-  color: {
-    accessor: function(d){ return d.animal; }
   },
   render: function(){
     this.scatterGroup = this.chart.append('g')
@@ -73,7 +72,7 @@ when defining a Chart, you must define a `render` function and, optionally, an `
 
 all functions that you define in your configurations are run within the Chart's scope.
 
-it's good to keep consistent naming convention so that you make the Chart or Feature's name correspond to some d3.selection or function that you bind to the Chart.
+it's good to keep consistent naming convention so that you make the Chart or Feature's name correspond to some d3.selection or function that you bind to the Chart (e.g. a Chart name 'scatter' defines a viz.scatter d3.selection).
 
 see [configurations](#configurations)
 
@@ -97,7 +96,7 @@ yad3.Feature('xAxis',{
       .call(this.axis.x);
   },
   update: function(){
-    // we defined axis : x with a function that is refresh on update
+    // we defined axis : x with a function that is refreshed on update
     this.xAxis.transition().duration(1000).call(this.axis.x);
   }
 });
