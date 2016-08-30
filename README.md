@@ -72,7 +72,7 @@ when defining a Chart, you must define a `render` function and, optionally, an `
 
 all functions that you define in your configurations are run within the Chart's scope.
 
-it's good to keep consistent naming convention so that you make the Chart or Feature's name correspond to some d3.selection or function that you bind to the Chart (e.g. a Chart name 'scatter' defines a viz.scatter d3.selection).
+it's good to keep a consistent naming convention so that the Chart or Feature's name corresponds to some d3.selection or function that you define for the Chart (e.g. a Chart named 'scatter' defines a viz.scatter d3.selection).
 
 see [configurations](#configurations)
 
@@ -156,7 +156,7 @@ convenience function for scaling data. this requires a consistent naming convent
 
 ```
 
-<span id="configurations"></span>
+<div id="configurations"></div>
 ## configurations
 configurations work as you would expect with d3. passing no parameters returns the property's value, passing a key/value sets property value.
 
@@ -214,7 +214,7 @@ returns string for xy transformation
 
 returns string for viz's width/height viewBox
 
-<span id="accessor"></span>
+<div id="accessor"></div>
 ### viz.accessor()
 
 Accessors play a big role in maintaining scales, shapes, and color configurations. simply swapping out accessor is a good way to create toggles for your visualizations.
@@ -285,7 +285,7 @@ set color range values as array. can be static or dynamic.
 
 **domain** see [viz.color.domain](#vizColorDomain)
 
-<span id="vizColorDomain"></span>
+<div id="vizColorDomain"></div>
 #### viz.color.domain
 You can define a static or dynamic domain by setting a constant or a function. You can also set domain as 'categorical' or 'continuous'
 
